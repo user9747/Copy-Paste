@@ -1,0 +1,35 @@
+{
+
+    "manifest_version": 2,
+    "name": "paste",
+    "version": "1.0",
+  
+    "description": "copy paste",
+  
+    "icons": {
+      
+    },
+    "applications": {
+        "gecko": {
+          "id": "temp@example.com"
+        }
+      },
+      "permissions": [
+        "activeTab",
+        "<all_urls>"
+      ],
+    
+      "browser_action": {
+        "default_icon": "icons/beasts-32.png",
+        "default_title": "paste",
+        "default_popup": "popup.html"
+      },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.mozilla.org/*"],
+        "js": ["background.js"]
+      }
+    ]
+  
+  }
