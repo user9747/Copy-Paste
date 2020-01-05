@@ -4,15 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./firebase-app.js"></script>
+<script src="./firebase-firestore.js"></script>
+<link rel="stylesheet" href="style.css">
 </head>
   <body>
-    <h1>Copy Paste</h1>
-    <form >
-      <input type="text" placeholder="paste-id">
-      <input type="text" placeholder= "content" value="">
-      <button id="paste">Paste</button>
-      <button id="copy">Copy</button>
-    </form>
+    <h1 class="header">Copy Paste</h1>
+    <div id="message"></div>
+    <div class="flex-container">
+      <input type="text" placeholder="paste-id" id="id" value="" class="flex-container">
+      <textarea rows="4" cols="50" placeholder= "content" id="content" value="" class="flex-container"></textarea>
+      <button id="paste" class="flex-container button">Paste</button>
+      <button id="copy" class="flex-container button button2">Copy</button>
+    </div>
+    <div>
+      <h3>How To</h3>
+     <p>To share content paste text in content area. Type a paste-id of your choice. Click paste!. Share the paste-id to your friends to for them to copy the content.</p>
+     <p>To copy just type in the paste-id and click copy!.</p>
+     <p>Pasting onto a used paste-id will replace the old text in it.</p>
+    </div>
   </body>
   <script src="pop.js"></script>
 </html>

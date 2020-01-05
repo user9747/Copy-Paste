@@ -16,18 +16,20 @@
       },
       "permissions": [
         "activeTab",
-        "<all_urls>"
+        "<all_urls>",
+        "clipboardRead",
+        "clipboardWrite"
       ],
     
       "browser_action": {
-        "default_icon": "icons/beasts-32.png",
-        "default_title": "paste",
+        "default_icon": "icons/icon.png",
+        "default_title": "Copy-Paste",
         "default_popup": "popup.html"
       },
   
     "content_scripts": [
       {
-        "matches": ["*://*.mozilla.org/*"],
+        "matches": ["<all_urls>"],
         "js": ["background.js"]
       }
     ]
