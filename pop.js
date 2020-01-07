@@ -55,3 +55,32 @@ function copyFirebase() {
 
 document.getElementById("paste").addEventListener('click', pasteFirebase)
 document.getElementById("copy").addEventListener('click', copyFirebase)
+
+
+helpButtons = document.getElementsByClassName("help-button");
+
+for(var i = 0; i < 2; i++){
+    helpButtons[i].addEventListener('click',toggle);
+}
+// document.getElementById("help-button").addEventListener('click',toggle)
+
+function toggle() {
+    var home = document.getElementsByClassName("home");
+    var help =  document.getElementsByClassName("help");
+
+    console.log(home[0].style.visibility);
+
+    if(home[0].style.visibility == "hidden"){
+        home[0].style.visibility = "visible";
+        home[0].style.width = "inherit";
+        help[0].style.visibility = "hidden";
+        help[0].style.width = "0%";
+    }
+    else{
+        home[0].style.visibility = "hidden";
+        home[0].style.width = "0%";
+        help[0].style.visibility = "visible";
+        help[0].style.width = "inherit";
+    }
+    
+}
