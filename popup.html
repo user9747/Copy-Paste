@@ -9,20 +9,38 @@
 <link rel="stylesheet" href="style.css">
 </head>
   <body>
-    <h1 class="header">Copy Paste</h1>
-    <div id="message"></div>
-    <div class="flex-container">
-      <input type="text" placeholder="paste-id" id="id" value="" class="flex-container">
-      <textarea rows="4" cols="50" placeholder= "content" id="content" value="" class="flex-container"></textarea>
-      <button id="paste" class="flex-container button">Paste</button>
-      <button id="copy" class="flex-container button button2">Copy</button>
+    <div class="flex-container home">
+      <div class="flex-container header">
+        <h1>Copy Paste</h1>
+        <button class="help-button">Help</button>
+      </div>
+      <div id="message"></div>
+      <div class="flex-container main-content">
+        <div class="flex-container inner-content">
+            <input type="text" placeholder="paste-id" id="id" value="" class="paste-id">
+            <textarea rows="4" cols="50" placeholder= "content" id="content" value="" class="content-area"></textarea>
+            <div class="flex-container button-row">
+                <button id="paste" class="button">Paste</button>
+                <button id="copy" class="button button2">Copy</button>
+            </div>
+        </div>        
+      </div>
     </div>
-    <div>
-      <h3>How To</h3>
-     <p>To share content paste text in content area. Type a paste-id of your choice. Click paste!. Share the paste-id to your friends to for them to copy the content.</p>
-     <p>To copy just type in the paste-id and click copy!.</p>
-     <p>Pasting onto a used paste-id will replace the old text in it.</p>
+    <div class="flex-container help">
+      <div class="flex-container help-header"> 
+        <button class="help-button">back</button>
+        <div class="flex-container help-title">
+            <h1>Help</h1>
+        </div>
+      </div>
+      <div class="flex-container help-content">
+        <p>Paste the text to be shared in content and enter a paste-id of your choice. Click paste!. Share the paste-id to your friends to for them to copy the content.</p>
+        <p>To copy the content from an paste-id, click copy!</p>
+        <p>Pasting onto a used paste-id will replace the old text in it.</p>
+      </div>
     </div>
+
+    <!--  -->
   </body>
   <script src="pop.js"></script>
 </html>
